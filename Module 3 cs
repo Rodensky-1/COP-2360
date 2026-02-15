@@ -1,0 +1,37 @@
+using System;
+public class Bunny
+{
+    public string Name;
+    public bool LikesCarrots;
+    public bool LikesHumans;
+
+    public Bunny(
+        string name,
+        bool likesCarrots = false,
+        bool likesHumans = false)
+    {
+        Name = name;
+        LikesCarrots = likesCarrots;
+        LikesHumans = likesHumans;
+    }
+public void Output()
+{
+    string message = Name + "Does that bunny love carrots";
+
+    if (!LikesCarrots)  
+    {
+            message += "not ";
+        };
+
+        message += "like carrots and also does ";
+
+        if (!LikesHumans)
+        {
+            message += "not ";
+        };
+
+        message += "like humans";
+
+        Console.WriteLine(message);
+    }
+}
